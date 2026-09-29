@@ -8,7 +8,8 @@ appears instantly on everyone's device. One codebase runs on **Android** and the
 <p>
   <a href="https://listvault.netlify.app"><b>▶ Try the live demo</b></a> &nbsp;·&nbsp;
   <a href="https://github.com/ODIRAA-git/LIST_VAULT/releases/latest/download/list-vault.apk"><b>📱 Download for Android (APK)</b></a> &nbsp;·&nbsp;
-  <a href="demo_videos/list_vault_demo.mp4"><b>🎬 Watch the demo video</b></a>
+ <a href="#-demo"><b>🎬 Watch the demo video</b></a>
+
 </p>
 
 ## 👋 Recruiter or reviewer? Try it in under a minute
@@ -23,6 +24,14 @@ No sign-up needed.
 4. Add or tick off an item on one device and watch it update on the other in real time.
 
 <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://listvault.netlify.app" width="140" alt="QR code that opens the live demo on your phone">
+
+## 🎬 Demo
+
+
+
+https://github.com/user-attachments/assets/d4c40cfe-5307-4f77-8784-f4d30383818f
+
+
 
 <!--
 ## 📸 Screenshots
