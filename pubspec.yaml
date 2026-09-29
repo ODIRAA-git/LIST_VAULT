@@ -1,5 +1,5 @@
 name: family_list_app
-description: "A new Flutter project."
+description: "List Vault — a real-time shared shopping list for families."
 publish_to: 'none'
 
 version: 1.0.0+1

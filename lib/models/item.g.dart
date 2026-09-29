@@ -17,12 +17,12 @@ class ItemAdapter extends TypeAdapter<Item> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return Item(
-      name: fields[0] as String,
-      quantity: fields[1] as int,
-      category: fields[2] as String,
-      addedBy: fields[3] as String,
-      isDone: fields[4] as bool,
-      id: fields[5] as String,
+      id: fields[0] as String,
+      name: fields[1] as String,
+      quantity: fields[2] as int,
+      category: fields[3] as String,
+      addedBy: fields[4] as String,
+      isDone: fields[5] as bool,
       assignedTo: fields[6] as String?,
       barcode: fields[7] as String?,
     );
@@ -33,17 +33,17 @@ class ItemAdapter extends TypeAdapter<Item> {
     writer
       ..writeByte(8)
       ..writeByte(0)
-      ..write(obj.name)
-      ..writeByte(1)
-      ..write(obj.quantity)
-      ..writeByte(2)
-      ..write(obj.category)
-      ..writeByte(3)
-      ..write(obj.addedBy)
-      ..writeByte(4)
-      ..write(obj.isDone)
-      ..writeByte(5)
       ..write(obj.id)
+      ..writeByte(1)
+      ..write(obj.name)
+      ..writeByte(2)
+      ..write(obj.quantity)
+      ..writeByte(3)
+      ..write(obj.category)
+      ..writeByte(4)
+      ..write(obj.addedBy)
+      ..writeByte(5)
+      ..write(obj.isDone)
       ..writeByte(6)
       ..write(obj.assignedTo)
       ..writeByte(7)

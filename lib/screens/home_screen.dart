@@ -6,6 +6,8 @@ import 'package:uuid/uuid.dart';
 import '../models/item.dart';
 import '../models/user.dart' as models;
 import '../providers/theme_provider.dart';
+import '../services/family_service.dart';
+import '../widgets/family_code_dialog.dart';
 
 import 'add_item_screen.dart';
 import 'shopping_mode_screen.dart';
@@ -342,6 +344,15 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("Family Shopping List"),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.group_add),
+            tooltip: 'Family code',
+            onPressed: () {
+              final family = FamilyService()
+                  .cachedFamily(widget.currentUser.familyGroupId);
+              if (family != null) showFamilyCodeDialog(context, family);
+            },
+          ),
           IconButton(
             icon: Icon(themeProvider.isDarkMode
                 ? Icons.light_mode

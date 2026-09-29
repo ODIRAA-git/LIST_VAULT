@@ -1,11 +1,31 @@
+import 'package:hive/hive.dart';
+
+part 'item.g.dart';
+
+@HiveType(typeId: 0)
 class Item {
+  @HiveField(0)
   String id;          // Unique ID
+  
+  @HiveField(1)
   String name;
+  
+  @HiveField(2)
   int quantity;
+  
+  @HiveField(3)
   String category;
+  
+  @HiveField(4)
   String addedBy;
+  
+  @HiveField(5)
   bool isDone;
+  
+  @HiveField(6)
   String? assignedTo; // Optional user ID
+  
+  @HiveField(7)
   String? barcode;    // Optional barcode
 
   Item({

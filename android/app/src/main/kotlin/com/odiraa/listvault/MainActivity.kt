@@ -1,4 +1,4 @@
-package com.example.family_list_app
+package com.odiraa.listvault
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -8,7 +8,7 @@
 PRODUCT_NAME = family_list_app
 
 // The application's bundle identifier
-PRODUCT_BUNDLE_IDENTIFIER = com.example.familyListApp
+PRODUCT_BUNDLE_IDENTIFIER = com.odiraa.listvault
 
 // The copyright displayed in application information
-PRODUCT_COPYRIGHT = Copyright © 2025 com.example. All rights reserved.
+PRODUCT_COPYRIGHT = Copyright © 2025 ODIRAA-git. All rights reserved.
