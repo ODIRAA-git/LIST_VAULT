@@ -6,7 +6,10 @@ import '../widgets/family_code_dialog.dart';
 import 'home_screen.dart';
 
 class FamilySetupScreen extends StatefulWidget {
-  const FamilySetupScreen({super.key});
+  /// When true, immediately starts the guest demo (used by the homepage banner).
+  final bool startDemo;
+
+  const FamilySetupScreen({super.key, this.startDemo = false});
 
   @override
   State<FamilySetupScreen> createState() => _FamilySetupScreenState();
@@ -20,6 +23,14 @@ class _FamilySetupScreenState extends State<FamilySetupScreen> {
   bool isLoading = false;
 
   final _familyService = FamilyService();
+
+  @override
+  void initState() {
+    super.initState();
+    if (widget.startDemo) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => continueAsGuest());
+    }
+  }
 
   @override
   void dispose() {

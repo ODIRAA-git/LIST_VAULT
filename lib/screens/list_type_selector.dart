@@ -39,7 +39,12 @@ class ListTypeSelectorScreen extends StatelessWidget {
                       // Welcome Section
                       _buildWelcomeSection(),
 
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 24),
+
+                      // Recruiter / reviewer shortcut
+                      _buildDemoBanner(context),
+
+                      const SizedBox(height: 32),
 
                       // List Type Cards
                       _buildListTypeCard(
@@ -197,6 +202,58 @@ class ListTypeSelectorScreen extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildDemoBanner(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [Colors.blue.shade600, Colors.purple.shade500],
+        ),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            "Recruiter or reviewer?",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 6),
+          const Text(
+            "Try a pre-filled family list in one tap, then join it from your "
+            "phone with the code to see real-time collaboration.",
+            style: TextStyle(color: Colors.white70, fontSize: 14, height: 1.4),
+          ),
+          const SizedBox(height: 14),
+          ElevatedButton.icon(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const FamilySetupScreen(startDemo: true),
+                ),
+              );
+            },
+            icon: const Icon(Icons.play_arrow_rounded),
+            label: const Text("Try the demo"),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              foregroundColor: Colors.blue.shade700,
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
